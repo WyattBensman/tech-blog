@@ -1,0 +1,25 @@
+<div class="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 mt-8 flex justify-center">
+    <div class="border w-1/2">
+        <header class=" mx-8 py-4 border-b">
+            <h2 class="text-3xl font-semibold">Login</h2>
+        </header>
+        <section class="my-4 mx-8 flex flex-col">
+            <form class="loginForm">
+                {{!-- Grab Username --}}
+                <label class="block text-xl mb-2" for="username">Username:</label>
+                <input type="text" id="usernameLogin" class="block border w-full text-lg py-1 rounded" name="username">
+                {{!-- Grab Password --}}
+                <label class="block text-xl mb-2 mt-4" for="username">Password:</label>
+                <input type="password" class="block border w-full text-lg py-1 rounded" name="password"
+                    id="passwordLogin">
+                <div class="mx-auto text-center">
+                    {{!-- Login Event Handler --}}
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold mt-4 py-2 px-4 w-1/2 rounded"
+                        type="submit">Login!</button>
+                </div>
+            </form>
+            {{!-- Brings you to signup Page --}}
+            <a href="/signup" class="text-center mt-1">Not a member? Sign up!</a>
+        </section>
+    </div>
+</div>

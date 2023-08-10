@@ -1,0 +1,22 @@
+<div class="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 mt-8 flex justify-center">
+    <div class="border w-1/2">
+        <header class=" mx-8 py-4 border-b">
+            <h2 class="text-3xl font-semibold">Create New Post</h2>
+        </header>
+        <section class="my-4 mx-8 flex flex-col">
+            {{!-- Fetch POST to Create Blog --}}
+            <form class="createForm" action="">
+                {{!-- Grab Title Data --}}
+                <label class="block text-xl mb-2" for="title">Title:</label>
+                <input type="text" class="block border w-full text-lg py-1 rounded" name="title" id="createTitle">
+                {{!-- Grab Content Data --}}
+                <label class="block text-xl mb-2 mt-4" for="username">Content:</label>
+                <textarea name="content" id="createContent" class="block border w-full text-lg rounded" cols="30"
+                    rows="3"></textarea>
+                <div class="mx-auto text-center">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold mt-4 py-2 px-4 w-1/2 rounded"
+                        type="submit">Create</button>
+                </div>
+            </form>
+        </section>
+    </div>

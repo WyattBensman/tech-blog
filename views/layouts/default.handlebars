@@ -14,9 +14,12 @@
         <nav
             class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 py-4 bg-white shadow sm:items-baseline w-full">
             <div class="mb-2 sm:mb-0">
+                {{!-- Directs to Home View --}}
                 <a href="/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark">Home</a>
-                <a href="/one" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark ml-8">Dashboard</a>
-                {{!-- Need to Create a login.handlebars, this will be the body --}}
+                {{!-- Directs to Dashboard View --}}
+                <a href="/dashboard"
+                    class="text-2xl no-underline text-grey-darkest hover:text-blue-dark ml-8">Dashboard</a>
+                {{!-- Directs to Login View, if needed --}}
                 {{#if !loggedIn}}
                 <a href="/login" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark ml-8">Login</a>
                 {{else}}
