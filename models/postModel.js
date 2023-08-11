@@ -26,13 +26,6 @@ Post.init({
             key: 'id',
         },
     },
-    commentContent: {
-        type: DataTypes.STRING,
-        references: {
-            model: 'comment',
-            key: 'text',
-        },
-    }
 },
     {
         sequelize,
