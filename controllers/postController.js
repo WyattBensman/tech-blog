@@ -1,44 +1,6 @@
 const Post = require('../models/postModel');
 
 const PostController = {
-    // home Page
-    getPost: async (req, res) => {
-        try {
-            const post = await Post.findAll();
-            // Need to change this destination
-            res.render('/', { post });
-        } catch (error) {
-            console.error(error);
-            res.status(500).send('Error fetching users');
-        }
-    },
-
-    // idk tbh
-    /*     getPostById: async (req, res) => {
-            const postId = req.params.id;
-    
-            try {
-                const post = await Post.findByPk(postId);
-                if (post) {
-                    res.render('user/profile', { post });
-                } else {
-                    res.status(404).send('User not found');
-                }
-            } catch (error) {
-                console.error(error);
-                res.status(500).send('Error fetching user');
-            }
-        }, */
-
-    // Show Create Post Page
-    showCreatePostForm: (req, res) => {
-        try {
-            res.render('post/createPost');
-        } catch (error) {
-            console.error(error);
-            res.status(500).send('Error rendering Post Form');
-        }
-    },
 
     createPost: async (req, res) => {
         try {
@@ -52,8 +14,6 @@ const PostController = {
             res.status(500).send('Error creating user');
         }
     },
-
-    //
 
     // editPost Page
     updatePost: async (req, res) => {
